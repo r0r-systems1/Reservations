@@ -1,0 +1,38 @@
+<h2>EAS Categories</h2>
+
+(From /views/eas_types/index)<br />
+<table>
+  <tr>
+    <th>Name</th>
+
+    <th>Normal</th>
+    <th> </th>
+
+    <th>Early </th>    
+
+    <th> </th>
+    <th>10% <br/> discount</th>
+
+    <th></th>
+  </tr>
+
+<% @eas_types.each do |eas_type| %>
+  <tr>
+    <td><%= eas_type.name %> </td>
+    <td><%= eas_type.normal %></td>
+    <td> </td>
+    <td><%= eas_type.early %></td>
+    <td> </td> 
+    <td><%= eas_type.normal-(eas_type.normal*0.10) %></td>
+        
+<!--    <td><%= link_to 'Show', eas_type %></td> -->
+    <td><%= link_to 'Edit', edit_eas_type_path(eas_type) %></td>
+<!--    <td><%= link_to 'Remove', eas_type, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr> --> 
+<% end %>
+</table>
+
+
+<br />
+<%= link_to 'New Category', new_eas_type_path %>
+

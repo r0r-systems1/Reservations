@@ -1,0 +1,17 @@
+<h2>EAS Cats STUFF</h2>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Early </th>
+    <th>Normal</th>
+  </tr>
+
+<% @eas_types.each do |et| %>
+  <tr>
+    <td><%= et.name %> </td>
+    <td><%= et.early %></td>
+    <td><%= et.normal %></td>
+ </tr>  
+<% end %>
+</table>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>EAS Reservations</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "defaults" %>
+  <%= csrf_meta_tags %>
+</head>
+
+<body id="store" >
+<div id="banner" >
+<!-- <%= image_tag(" ") %> -->
+<%= @page_title || "EAS Reservations" %>
+</div>
+<div id="columns" >
+<div id="side" >
+<a href="http://localhost:3000" >Home</a><br />
+
+<a href="http://localhost:3000/payments" >View Payments</a><br />
+<a href="http://localhost:3000/attendees" >View Attendees</a><br />
+<!-- <a href="http://localhost:3000/products" >Products</a><br /> -->
+
+<hr> </hr>
+
+<a href="http://localhost:3000/attendees/new" >Add New Attendees</a><br />
+<a href="http://localhost:3000/payments/new" >Make Payment</a><br />
+<hr> </hr>
+<a href="http://localhost:3000/eas_types" >View Categories $</a><br />
+<a href="http://localhost:3000/eas_types/new" >Create a Category</a><br />
+</div>
+<div id="main" >
+
+<%= yield %>
+</div>
+</div>
+
+</body>
+</html>

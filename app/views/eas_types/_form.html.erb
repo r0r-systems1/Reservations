@@ -1,0 +1,29 @@
+<%= form_for(@eas_type) do |f| %>
+  <% if @eas_type.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@eas_type.errors.count, "error") %> prohibited this eas_type from being saved:</h2>
+
+      <ul>
+      <% @eas_type.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :early %><br />
+    <%= f.number_field :early %>
+  </div>
+  <div class="field">
+    <%= f.label :normal %><br />
+    <%= f.number_field :normal %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

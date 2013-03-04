@@ -1,0 +1,54 @@
+<%= form_for(@payment) do |f| %>
+  <% if @payment.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@payment.errors.count, "error") %> prohibited this payment from being saved:</h2>
+
+      <ul>
+      <% @payment.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+<p> Details of the person paying. </p>
+  <div class="field">
+    First and last name<br />
+    <%= f.text_field :name, size: 25 %>
+  </div>
+  <div class="field">
+    <%= f.label :address %><br />
+    <%= f.text_field :address %>
+  </div>
+  <div class="field">
+    Loccation/Town/City<br />
+    <%= f.text_field :locality, size: 15 %>
+
+    <%= f.label :state %>
+    <%= f.text_field :state, size: 6 %>
+
+    <%= f.label :country %>
+    <%= f.text_field :country, size: 10 %>
+
+    <%= f.label :postcode %>
+    <%= f.text_field :postcode, size:6 %>
+  </div>
+  <div class="field">
+    Landline or Mobile number<br />
+    <%= f.text_field :phone, size:12 %>
+  </div>
+  <hr> </hr>
+  <div class="field">
+    Full amount of donation<br />
+    <%= f.text_field :paymt_amount %>
+
+    <%= f.label :paymt_type %>
+    <%= f.text_field :paymt_type, size:8 %> Visa, Mastercard
+    </div>
+  <div class="field">
+    Your Credit Card Number<br />
+    <%= f.text_field :paymt_number %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

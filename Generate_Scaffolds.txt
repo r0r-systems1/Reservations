@@ -1,0 +1,57 @@
+rails g scaffold cart
+rails g scaffold line_item product_id:integer cart_id_integer
+rails g scaffold line_item product_id :integer cart_id :integer
+rails g scaffold PRODUCT title:string description:text image_url:string price:decimal
+rails g scaffold book title:string
+rails g scaffold author name:string
+rails g scaffold bookref title:string
+rails g scaffold bookref2 title:string
+rails g scaffold bk_subref sub_title :title:string 
+rails g scaffold bk_type type:string 
+rails g scaffold quote quote:string
+rails g scaffold book title:string author_id:integer
+rails g scaffold author name:string
+rails g scaffold book title:string
+rails g scaffold author name:string
+rails g scaffold quote quote:text
+rails g scaffold subtitle s_title:string
+rails g scaffold bookref bk_title:string
+rails g scaffold line_item product_id:integer cart_id:integer
+rails g scaffold res_type name:string
+rails g scaffold TypeOfRes name:string
+rails g scaffold Resname name:string
+rails g scaffold Resname name:string
+rails g scaffold ResType name:string
+rails g scaffold EarlyBird_type
+rails g scaffold eb_Res_Type
+rails g scaffold eb_Res_Type name:string
+rails g scaffold Res_Type name:string price:integer
+rails g scaffold ebRes_Type name:string price:integer
+rails g scaffold FullRes_Type name:string cost:integer
+rails g scaffold ebRes_Type name:string cost:integer
+rails g scaffold Reservation Name:string Phone:string Donation:integer state:string Eck_Id:integer Res_type:integer
+rails g scaffold Reservation Name:string Phone:string Donation:integer state:string EckId:integer
+rails g scaffold hi hi_type:string value1:integer value2:integer
+rails g scaffold eas eas_type:string value1:integer value2:integer
+rails g scaffold youth youth_type:string value1:integer value2:integer
+rails g scaffold camp camp_type:string value1:integer value2:integer
+rails g scaffold hi_data type:string price1:integer price2:integer
+rails g scaffold eas_data type:string price1:integer price2:integer
+rails g scaffold youth_data type:string price1:integer price2:integer
+rails g scaffold camp_data type:string price1:integer price2:integer
+rails g scaffold Hi_Paymt type:string price1:integer price2:integer 
+rails g scaffold EAS_Paymt type:string price1:integer price2:integer 
+rails g scaffold Youth_Paymt type:string price1:integer price2:integer 
+rails g scaffold Camp_Paymt type:string price1:integer price2:integer 
+rails g scaffold Camp_Paymt attendee:string price1:integer price2:integer 
+rails g scaffold Camp_Paymt attendee:string price1:integer price2:integer 
+rails g scaffold HI_Paymt attendee:string price1:integer price2:integer 
+rails g scaffold Youth_Paymt attendee:string price1:integer price2:integer 
+rails g scaffold EAS_Paymt attendee:string price1:integer price2:integer 
+rails g scaffold Attendee name:string eck_id:integer phone:string
+rails g scaffold Category category:string early_value:integer normal_value:integer
+rails g scaffold Payment name:string address:string locality:string state:string postcode:integer phone:string paymt_amount:integer paymt_type:string paymt_number:string
+rails g scaffold EAS_types name:string early:integer normal:integer
+rails g scaffold Payment name:string address:string locality:string state:string postcode:integer phone:string paymt_amount:integer paymt_type:string paymt_number:string
+rails g scaffold Payment name:string address:string locality:string state:string country:string postcode:integer phone:string paymt_amount:integer paymt_type:string paymt_number:string
+rails g scaffold Payment name:string address:string locality:string state:string country:string postcode:integer phone:string paymt_amount:integer paymt_type:string paymt_number:string

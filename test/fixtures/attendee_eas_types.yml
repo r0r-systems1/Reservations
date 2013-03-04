@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  eas_types_id: 1
+  attendee_id: 1
+
+two:
+  eas_types_id: 1
+  attendee_id: 1
