@@ -21,11 +21,11 @@ ActiveRecord::Schema.define(:version => 20130101025042) do
   end
 
   create_table "attendees", :force => true do |t|
-    t.string   "name",       :null => false
-    t.integer  "eck_id",     :null => false
-    t.string   "phone",      :null => false
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.string   "name",       :limit => 80, :null => false
+    t.string   "eck_id",     :limit => 9,  :null => false
+    t.string   "phone",      :limit => 16, :null => false
+    t.datetime "created_at",               :null => false
+    t.datetime "updated_at",               :null => false
   end
 
   create_table "attndcats", :force => true do |t|
