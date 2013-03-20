@@ -1,26 +1,55 @@
-<div id="product_list" >
-<h1>Listing products</h1>
+<h1>Show Events List</h1>
+
 <table>
+  <tr>
+    <th>Title</th>
+    <th>Event type</th>
+    <th>Event date</th>
+    <th>Num days</th>
+    <th>Event time</th>
+    <th>Description</th>
+    <th>Image url</th>
+    <th>Venue</th>
+    <th>Address</th>
+    <th>Contact</th>
+    <th>Quote</th>
+    <th>Quote ref</th>
+    <th>Quote auth</th>
+    <th>Adult price</th>
+    <th>Pens price</th>
+    <th>Fam price</th>
+    <th>Youth price</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
 <% @products.each do |product| %>
-<tr class="<%= cycle('list_line_odd', 'list_line_even') %>" >
-<td>
-<%= image_tag(product.image_url, :class => 'list_image') %>
-</td>
-<td class="list_description" >
-<dl>
-<dt><%= product.title %></dt>
-<dd><%= truncate(strip_tags(product.description),:length => 150) %></dd>
-</dl>
-</td>
-<td class="list_actions" >
-<%= link_to 'Show', product %><br/>
-<%= link_to 'Edit', edit_product_path(product) %><br/>
-<%= link_to 'Remove', product,:confirm => 'Are you sure?',:method => :delete %>
-</td>
-</tr>
+  <tr>
+    <td><%= product.title %></td>
+    <td><%= product.event_type %></td>
+    <td><%= product.event_date %></td>
+    <td><%= product.num_days %></td>
+    <td><%= product.event_time %></td>
+    <td><%= product.description %></td>
+    <td><%= product.image_url %></td>
+    <td><%= product.venue %></td>
+    <td><%= product.address %></td>
+    <td><%= product.contact %></td>
+    <td><%= product.quote %></td>
+    <td><%= product.quote_ref %></td>
+    <td><%= product.quote_auth %></td>
+    <td><%= product.adult_price %></td>
+    <td><%= product.pens_price %></td>
+    <td><%= product.fam_price %></td>
+    <td><%= product.youth_price %></td>
+    <td><%= link_to 'Show', product %></td>
+    <td><%= link_to 'Edit', edit_product_path(product) %></td>
+    <td><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
 <% end %>
 </table>
-</div>
-<br />
-<%= link_to 'New product', new_product_path %>
 
+<br />
+
+<%= link_to 'New Product', new_product_path %>

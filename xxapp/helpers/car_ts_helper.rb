@@ -1,0 +1,2 @@
+module CarTsHelper
+end

@@ -1,0 +1,27 @@
+<h1>Listing attendees</h1>
+(From /views/attendees/index)
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Id#</th>
+    <th>Phone</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @attendees.each do |attendee| %>
+  <tr>
+    <td><%= attendee.name %></td>
+    <td><%= attendee.eck_id %></td>
+    <td><%= attendee.phone %></td>
+<!--    <td><%= link_to 'Show', attendee %></td> -->
+    <td><%= link_to 'Edit', edit_attendee_path(attendee) %></td>
+<!--    <td><%= link_to 'Destroy', attendee, method: :delete, data: { confirm: 'Are you sure?' } %></td> -->
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Attendee', new_attendee_path %>

@@ -1,0 +1,90 @@
+<%= form_for(@product) do |f| %>
+  <% if @product.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@product.errors.count, "error") %> prohibited this product from being saved:</h2>
+
+      <ul>
+      <% @product.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :title %> Max 45 characters<br />
+    <%= f.text_field :title, :size =>45 %>
+  </div>
+  <div class="field">
+    <%= f.label :event_type %> Max 45 characters<br />
+    <%= f.text_field :event_type, :size =>45 %>
+  </div>
+  <div class="field_initiate">
+    Indicate  Everyone, Members, Special<br />
+    <%= f.text_field :initiate, :size => 8 %>  
+  </div><hr>
+  &nbsp;
+  <div class="field">
+    <%= f.label :event_date %><br />
+    <%= f.date_select :event_date %>
+  </div>
+  <div class="field">
+    <%= f.number_field :num_days, :size => 3 %>  
+    Up arrow or type number of days event runs for
+
+  </div>
+  <div class="field">
+    <%= f.label :event_time %><br />
+    <%= f.time_select :event_time %>
+  </div>
+  <div class="field_desc">
+    <%= f.label :description %> (max 320 words)<br />
+    <%= f.text_area :description, :rows => 10, :cols => 100 %>
+  </div>
+  <div class="field">
+    <%= f.label :image_url %><br />
+    <%= f.text_field :image_url %>
+  </div>
+  <div class="field">
+    <%= f.label :venue %> (max 8 words)<br />
+    <%= f.text_field :venue, :size =>50 %>
+  </div>
+  <div class="field">
+    <%= f.label :address %> (max 8 words)<br />
+    <%= f.text_field :address, :size =>45 %>
+  </div>
+  <div class="field">
+    <%= f.label :contact %> (First name and phone)<br />
+    <%= f.text_field :contact, :size =>45 %>
+  </div><hr>&nbsp;
+  <div class="field">
+    Brief <%= f.label :quote %> (max 320 words)<br />
+    <%= f.text_area :quote, :rows => 10, :cols => 100 %>
+  </div>
+  <div class="field">
+    <%= f.label :quote_ref %><br />
+    <%= f.text_area :quote_ref, :rows => 2, :cols => 60 %>
+  </div>
+  <div class="field">
+    <%= f.label :quote_auth %><br />
+    <%= f.text_field :quote_auth, :size =>20 %>
+  </div>
+  <b>Suggested Donations </b> <br/>
+  Click up arrow or type amount in whole dollars only
+  <div class="field_donations">
+    <%= f.number_field :adult_price %> Adult<br />
+    
+	<%= f.number_field :pens_price %>
+    Pensioner/Student<br />
+    
+    <%= f.number_field :fam_price %>
+    Family<br />
+
+    <%= f.number_field :youth_price %>
+    Youth and young adult<br />
+  </div> 
+  &nbsp;
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

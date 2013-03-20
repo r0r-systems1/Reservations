@@ -1,0 +1,2 @@
+module EasTypesHelper
+end

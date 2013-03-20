@@ -1,8 +1,9 @@
 <p id="notice"><%= notice %></p>
-
+(/app/views/product/show)
 <p>
-  <b>Title:</b>
-  <%= @product.title %>
+  <b>Event Details</b><br />
+   <%= @product.event_type %> for <%= @product.initiate %>.   <%= @product.title %> over 
+   <%= @product.num_days %> day/s. Starting <%= @product.event_date %>
 </p>
 
 <p>
@@ -11,13 +12,62 @@
 </p>
 
 <p>
-  <b>Image url:</b>
+  <b>Accompanying Image </b>
   <%= @product.image_url %>
+</p>
+<!-- ------------------------ -->
+<p>
+  <b>Venue:</b>
+  <%= @product.venue %>, <%= @product.address %> <br />
+    <b>Contact:</b>  <%= @product.contact %>
+</p>
+
+<!-- -----------------------
+<p>
+  <b>Address:</b>
+  <%= @product.address %>
 </p>
 
 <p>
-  <b>Price:</b>
-  <%= @product.price %>
+  <b>Contact:</b>
+  <%= @product.contact %>
+</p>
+ ------------------------>
+ 
+<p>
+  <b>Quote:</b>
+  <i><%= @product.quote %> </i> <br />
+  From the book  <i><%= @product.quote_ref %> </i> by  <%= @product.quote_auth %>
+</p>
+<!-- ----------------------
+<p>
+  <b>Quote ref:</b>
+  <%= @product.quote_ref %>
+</p>
+
+<p>
+  <b>Quote auth:</b>
+  <%= @product.quote_auth %>
+</p>
+------------------------ -->
+<p>
+  <b>Adults . . . . . . . . . . . . .  </b>
+  <%= @product.adult_price %>
+</p>
+
+<p>
+  <b>Pensioners / Students</b>
+  <%= @product.pens_price %>
+</p>
+
+<p>
+  <b>Family . . . . . . . . . . . . . </b>
+  <%= @product.fam_price %>
+</p>
+
+<p>
+  <b>Youth & young adults . </b>
+  <%= @product.youth_price %>
 </p>
 
 

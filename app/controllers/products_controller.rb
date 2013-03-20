@@ -18,6 +18,7 @@ class ProductsController < ApplicationController
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @product }
+
     end
   end
 
@@ -40,6 +41,8 @@ class ProductsController < ApplicationController
   # POST /products
   # POST /products.json
   def create
+    @product = Product.new(params[:product])
+
     respond_to do |format|
       if @product.save
         format.html { redirect_to @product, notice: 'Product was successfully created.' }

@@ -1,20 +1,48 @@
 <% if notice %>
 <p id="notice" ><%= notice %></p>
 <% end %>
-<h1>ECK Event Reservations</h1>
+<h1>Current Eckankar Events</h1>
 <p>This system is for attendees to pre register for ECKANKAR events.<br/>
-Select options from the menu opposite.<br/>
-Find this display in /store/index.html.erb
+(Display = /store/index.html.erb. css = /assets/depot.css)
 </p>
+
   <% @products.each do |product| %>
-  <div class="entry" >
-    <%= image_tag(product.image_url) %>
-    <h3><%= product.title %></h3>
-    <%= sanitize(product.description) %>
-    <div class="price_line" >
-      <span class="price" ><%= number_to_currency(product.price) %></span>
-      <%= button_to 'Add to Cart', line_items_path(:product_id => product) %>
-    </div>
-  </div>
+     <div class="entry" >
+       <%= image_tag(product.image_url) %>
+       <h3><%= product.title %></h3> 
+
+             <div class="field_date"> 
+             <%= product.event_time %> <%= product.event_date %>
+             </div>
+             
+             <div class="field_description">
+             <%= truncate(sanitize(strip_tags(product.description)), :length =>300) %>
+             </div>
+             
+             <div class="field_venue_details">
+             <%= product.address %>.<br /> Contact <%= product.contact %> for more information
+             </div>
+             
+             <div class="field_quotes">
+             Contemplation Seed.<br /> <i><%= truncate(sanitize(strip_tags(product.quote)), :length =>300) %> </i><br />
+              From the book <i><%= product.quote_ref %></i> by <%= product.quote_auth %>
+             </div>
+             
+             
+             <div class="price_line">
+				<span class="adultprice" >Adults <%= number_to_currency(product.adult_price) %></span><br />
+				<span class="famprice" >Family <%= number_to_currency(product.fam_price) %></span><br />
+				<span class="pensprice" >pensioner/student <%= number_to_currency(product.pens_price) %></span><br />
+				<span class="youthprice" >Youth <%= number_to_currency(product.youth_price) %></span><br />
+			  </div>
+			  <div class="add2cartbutton">
+			  
+			   <u> This event is for <%= product.initiate %></u> 
+				   <%= button_to 'Register for this event', line_items_path(:product_id => product) %>
+            </div>
+
+     </div>
+     
+
 <% end %>
 

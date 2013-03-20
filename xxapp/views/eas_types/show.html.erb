@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @eas_type.name %>
+</p>
+
+<p>
+  <b>Early:</b>
+  <%= @eas_type.early %>
+</p>
+
+<p>
+  <b>Normal:</b>
+  <%= @eas_type.normal %>
+</p>
+
+
+<%= link_to 'Edit', edit_eas_type_path(@eas_type) %> |
+<%= link_to 'Back', eas_types_path %>

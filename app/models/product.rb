@@ -1,26 +1,29 @@
 class Product < ActiveRecord::Base
-  attr_accessible :description, :image_url, :price, :title
-  default_scope :order => 'title'
-  has_many :line_items
-  before_destroy :ensure_not_referenced_by_any_line_item
-   
-  validates :title, :description, :image_url, :presence => true
-  validates :image_url, :format => {:with => %r{\.(gif|jpg|jpeg|png)$}i, :message => 'must be a URL for gif, jpg or png image'
-  }
-  validates :price, :numericality => {:greater_than_or_equal_to =>0.01} ## checked against the /test/functional/product_test.rb
-  validates :title, :uniqueness =>true
-  
-
-  
-end
- private
-   # ensure that there are no line items referencing this product
-
-def ensure_not_referenced_by_any_line_item
-   if line_items.empty?
-     return true
-   else
-     errors.add(:base, 'Line Item Pesent')
-     return false
-   end
+  attr_accessible :address, :adult_price, :contact, :description, :event_date, :event_time, :event_type, :fam_price, :image_url, :initiate, :num_days, :pens_price, :quote, :quote_auth, :quote_ref, :title, :venue, :youth_price
+    
+   validates :title, :length => { :maximum => 45 }
+	validates :event_type, :length => { :maximum => 45 }
+	validates :description, :length => { :maximum => 1000 }
+	validates :contact, :length => { :maximum => 45 }
+	validates :address, :length => { :maximum => 45 }
+	validates :quote, :length => { :maximum => 1000 }
+	validates :quote_auth, :length => { :maximum => 30}
+	validates :quote_ref, :length => { :maximum => 120 } 
+   validates :initiate, :length => { :maximum => 26 }
+      
+    default_scope :order => 'title'
+    has_many :line_items
+    before_destroy :ensure_not_referenced_by_any_line_item
+    
+    private
+# ensure that there are no line items referencing this product
+	def ensure_not_referenced_by_any_line_item
+		if line_items.empty?
+	return true
+	else
+		errors.add(:base, 'Line Items present')
+	return false
+	end
+	end
+    
 end
