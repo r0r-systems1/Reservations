@@ -58,10 +58,5 @@ module Depot
 
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
-<<<<<<< HEAD
-=======
-    
-    config.assets.initialize_on_precompile = false
->>>>>>> 74e131a2e9eb3dd5e699f0e0fd1e49d08ce35e78
   end
 end

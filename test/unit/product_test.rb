@@ -1,6 +1,7 @@
 require 'test_helper'
 
 class ProductTest < ActiveSupport::TestCase
+<<<<<<< HEAD
 	fixtures :products
 
 test "product attributes must not be empty" do
@@ -56,4 +57,9 @@ product.errors[:title].join('; ')
 end
 
 	
+=======
+  # test "the truth" do
+  #   assert true
+  # end
+>>>>>>> 74e131a2e9eb3dd5e699f0e0fd1e49d08ce35e78
 end

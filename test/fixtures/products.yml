@@ -2,6 +2,7 @@
 
 one:
   title: MyString
+<<<<<<< HEAD
   description: MyText
   image_url: MyString
   price: 9.99
@@ -17,3 +18,40 @@ ruby:
   description: Ruby is the fastest growing and most exciting and dynamic language out there
   price: 49.50
   image_url: none.gif
+=======
+  event_type: MyString
+  event_date: 2013-03-11
+  num_days: 1
+  event_time: 2013-03-11 10:39:37
+  description: MyText
+  image_url: MyString
+  venue: MyString
+  address: MyString
+  contact: MyString
+  quote: MyText
+  quote_ref: MyText
+  quote_auth: MyString
+  adult_price: 1
+  pens_price: 1
+  fam_price: 1
+  youth_price: 1
+
+two:
+  title: MyString
+  event_type: MyString
+  event_date: 2013-03-11
+  num_days: 1
+  event_time: 2013-03-11 10:39:37
+  description: MyText
+  image_url: MyString
+  venue: MyString
+  address: MyString
+  contact: MyString
+  quote: MyText
+  quote_ref: MyText
+  quote_auth: MyString
+  adult_price: 1
+  pens_price: 1
+  fam_price: 1
+  youth_price: 1
+>>>>>>> 74e131a2e9eb3dd5e699f0e0fd1e49d08ce35e78
