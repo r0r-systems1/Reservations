@@ -164,6 +164,11 @@ color: #bfb;
 font-size: small;
 }
  
- 
- 
+hr{
+position :absolute;
+width:200px;
+float:left;
+left:0px;
+}
+
  
