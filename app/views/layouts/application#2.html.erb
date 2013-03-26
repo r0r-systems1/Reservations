@@ -1,33 +1,56 @@
-<h1>EAS Events & Reservations Admin </h1>
-<p>Find this page in app/views/admin/index.html.erb</p>
-<p>
+<!DOCTYPE html>
+<html>
+<head>
+  <title>EAS Events & Reservations</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+
+<body id="store" >
+   <div id="banner" >
+       <%= @page_title || "EAS Events & Reservations" %>
+   </div>
+<div id="columns" >
+   <div id="side" >
+
       <a href="http://mighty-forest-6273.herokuapp.com/" >Home on Heroku</a><br />
+
+      <hr>  
       <a href="http://mighty-forest-6273.herokuapp.com/products/new" >New Product</a><br />
       <a href="http://mighty-forest-6273.herokuapp.com/attendees/new" >New Attendee</a><br />
       <a href="http://mighty-forest-6273.herokuapp.com/payments/new" >New Payment</a><br />
       <a href="http://mighty-forest-6273.herokuapp.com/eas_types/new" >NewCategory</a><br />
       <a href="http://mighty-forest-6273.herokuapp.com/new" >New user</a><br />
+
+      <hr> 
       <a href="http://mighty-forest-6273.herokuapp.com/eas_types" >View Categories</a><br />
       <a href="http://mighty-forest-6273.herokuapp.com/payments" >View Payments</a><br />
       <a href="http://mighty-forest-6273.herokuapp.com/attendees" >View Attendees</a><br />
-      <a href="http://mighty-forest-6273.herokuapp.com/products" >View Products</a><br />
-      <a href="http://mighty-forest-6273.herokuapp.com/users" >View users</a>
-</p>
-<p>    
-      === EAS Reservations menus on Localhost === <br/>
+      <a href="http://mighty-forest-6273.herokuapp.com/users" >View users</a><br />
+      <a href="http://mighty-forest-6273.herokuapp.com/products" >View Products</a>
+      <hr><br/><br/><br/><br/>
+      
       <a href="http://localhost:3000/" >Home on localhost</a><br />
+      <hr>
       <a href="http://localhost:3000/products/new" >New Product</a><br />
       <a href="http://localhost:3000/attendees/new" >New Attendee</a><br />
       <a href="http://localhost:3000/payments/new" >New Payment</a><br />
       <a href="http://localhost:3000/eas_types/new" >NewCategory</a><br />
       <a href="http://localhost:3000/users/new" >New user</a><br />
+      <hr> 
       <a href="http://localhost:3000/eas_types" >View Categories</a><br />
       <a href="http://localhost:3000/payments" >View Payments</a><br />
       <a href="http://localhost:3000/attendees" >View Attendees</a><br />
-      <a href="http://localhost:3000/products" >View Products</a><br />
-      <a href="http://localhost:3000/users" >View users</a>
+      <a href="http://localhost:3000/users" >View users</a><br />
+      <a href="http://localhost:3000/products" >View Products</a>
+      <hr>
       
-</p>
+   </div>
+   <div id="main" >
+      <%= yield %>
+   </div>
+</div>
 
 </body>
 </html>
