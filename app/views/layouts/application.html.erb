@@ -11,12 +11,20 @@
    <div id="banner" >
        <%= @page_title || "EAS Events & Reservations" %>
    </div>
+   
+   
+   <div id="columns">
+       <div id="side">
+       Some text in here as a filler
+       </div>
        
+        <div id="main">
+        <%= yield %>
+        </div>
+   </div><!--end of columns -->
+   
 
-   <div id="main" >
-      <%= yield %>
-   </div>
-</div>
+ </div><!--end of store -->
 
 </body>
 </html>

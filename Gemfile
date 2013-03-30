@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-
+## ruby "2.0.0"
 gem 'rails', '3.2.8'
 
 # Bundle edge Rails instead:
@@ -18,7 +18,7 @@ group :assets do
 end
 
 group :development, :test do
-   gem 'sqlite3'
+   gem 'pg'
 end
 
 group :production do
