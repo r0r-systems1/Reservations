@@ -1,14 +1,14 @@
 <p id="notice"><%= notice %></p>
 (/app/views/product/show)
 <p>
-  <b>Event Details</b><br />
-   <%= @product.event_type %> for <%= @product.initiate %>.   <%= @product.title %> over 
-   <%= @product.num_days %> day/s. Starting <%= @product.event_date %>
-</p>
-
 <p>
   <b>Description:</b>
   <%= @product.description %>
+</p>
+
+  Details of this <i><%= @product.title %></i> <%= @product.event_type %> <br />
+   This event is for <b><%= @product.initiate %></b><br/> 
+   It is a <%= @product.num_days %> day/s event. Starting <%= @product.event_time %> on the <%= @product.event_date %>
 </p>
 
 <p>
@@ -52,22 +52,22 @@
 ------------------------ -->
 <p>
   <b>Adults . . . . . . . . . . . . .  </b>
-  <%= @product.adult_price %>
+  $<%= @product.adult_price %>
 </p>
 
 <p>
   <b>Pensioners / Students</b>
-  <%= @product.pens_price %>
+  $<%= @product.pens_price %>
 </p>
 
 <p>
   <b>Family . . . . . . . . . . . . . </b>
-  <%= @product.fam_price %>
+  $<%= @product.fam_price %>
 </p>
 
 <p>
   <b>Youth & young adults . </b>
-  <%= @product.youth_price %>
+  $<%= @product.youth_price %>
 </p>
 
 

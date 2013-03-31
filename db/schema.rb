@@ -21,11 +21,11 @@ ActiveRecord::Schema.define(:version => 20130316010137) do
   end
 
   create_table "attendees", :force => true do |t|
-    t.string   "name",       :null => false
-    t.integer  "eck_id",     :null => false
-    t.string   "phone",      :null => false
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.string   "name",       :limit => 80, :null => false
+    t.string   "eck_id",     :limit => 9,  :null => false
+    t.string   "phone",      :limit => 16, :null => false
+    t.datetime "created_at",               :null => false
+    t.datetime "updated_at",               :null => false
   end
 
   create_table "attndcats", :force => true do |t|
@@ -74,16 +74,16 @@ ActiveRecord::Schema.define(:version => 20130316010137) do
   add_index "payments", ["state"], :name => "index_payments_on_state"
 
   create_table "products", :force => true do |t|
-    t.string   "title"
-    t.string   "event_type"
+    t.string   "title",       :null => false
+    t.string   "event_type",  :null => false
     t.date     "event_date"
     t.integer  "num_days"
     t.time     "event_time"
-    t.text     "description"
+    t.text     "description", :null => false
     t.string   "image_url"
-    t.string   "venue"
-    t.string   "address"
-    t.string   "contact"
+    t.string   "venue",       :null => false
+    t.string   "address",     :null => false
+    t.string   "contact",     :null => false
     t.text     "quote"
     t.text     "quote_ref"
     t.string   "quote_auth"

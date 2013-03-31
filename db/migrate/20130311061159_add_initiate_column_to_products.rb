@@ -1,5 +1,6 @@
 class AddInitiateColumnToProducts < ActiveRecord::Migration
-  def change
-    add_column :products, :initiate, :string
+  def up 
+  change_table :products do |t|
+    t.string :initiate, :null =>false
   end
 end
