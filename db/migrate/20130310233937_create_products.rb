@@ -3,11 +3,12 @@ class CreateProducts < ActiveRecord::Migration
     create_table :products do |t|
       t.string :title, :null =>false
       t.string :event_type, :null =>false
+      t.string :initiate, :null =>false
       t.date :event_date
       t.integer :num_days
       t.time :event_time
       t.text :description, :null =>false
-      t.string :image_url
+      t.integer :image_id
       t.string :venue, :null =>false
       t.string :address, :null =>false
       t.string :contact, :null =>false
