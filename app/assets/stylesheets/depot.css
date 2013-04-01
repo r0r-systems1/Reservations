@@ -156,7 +156,7 @@ background: white;
 }
 #side {
 float: left;
-padding-top: 1em 0 1em 0; /*TRBL*/
+/*padding-top: 1em 0 1em 0; TRBL*/
 width: 0; /*was 9em; for menu*/
 background: #141;
 }
