@@ -26,6 +26,8 @@ class ProductsController < ApplicationController
   # GET /products/new.json
   def new
     @product = Product.new
+    @all_member_types=MemberType.all
+    @prod_memtypes=@product.product_member_types.build
 
     respond_to do |format|
       format.html # new.html.erb
@@ -42,6 +44,11 @@ class ProductsController < ApplicationController
   # POST /products.json
   def create
     @product = Product.new(params[:product])
+      params[:member_types][:id].each do |memtypes|
+        if!memtypes.empty?
+          @member_types.product_member_types.build(:mtype_id => memtypes)
+           end
+         
 
     respond_to do |format|
       if @product.save

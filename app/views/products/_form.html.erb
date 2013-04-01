@@ -15,7 +15,13 @@
     <%= f.label :title %> Max 45 characters<br />
     <%= f.text_field :title, :size =>45 %>
   </div>
+  
+   <%=fields_for(@prod_memtypes) do |ab|
   <div class="field">
+  <%=ab.label"Member Types" %> <br/>
+  <%=collection_select(:memtypes,:id,@all_member_types,:id,:m_type,{},{:multiple =>false} ) %>
+   
+  
     <%= f.label :event_type %> Max 45 characters<br />
     <%= f.text_field :event_type, :size =>45 %>
   </div>

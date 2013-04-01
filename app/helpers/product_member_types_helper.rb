@@ -1,0 +1,2 @@
+module ProductMemberTypesHelper
+end
