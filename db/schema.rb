@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130401062949) do
+ActiveRecord::Schema.define(:version => 20130406095815) do
 
   create_table "attendee_eas_types", :force => true do |t|
     t.integer  "eas_types_id", :null => false
@@ -51,8 +51,9 @@ ActiveRecord::Schema.define(:version => 20130401062949) do
   create_table "line_items", :force => true do |t|
     t.integer  "product_id"
     t.integer  "cart_id"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",                :null => false
+    t.datetime "updated_at",                :null => false
+    t.integer  "quantity",   :default => 1
   end
 
   create_table "member_types", :force => true do |t|

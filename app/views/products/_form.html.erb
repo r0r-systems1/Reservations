@@ -16,15 +16,12 @@
     <%= f.text_field :title, :size =>45 %>
   </div>
   
-   <%=fields_for(@prod_memtypes) do |ab|
-  <div class="field">
-  <%=ab.label"Member Types" %> <br/>
-  <%=collection_select(:memtypes,:id,@all_member_types,:id,:m_type,{},{:multiple =>false} ) %>
-   
-  
-    <%= f.label :event_type %> Max 45 characters<br />
+
+  <div class="field_event_type">
+      <%= f.label :event_type %> Max 45 characters<br />
     <%= f.text_field :event_type, :size =>45 %>
   </div>
+  
   <div class="field_initiate">
     Indicate  Everyone, Members, High Initiates<br />
     <%= f.text_field :initiate, :size => 26 %>  
@@ -34,12 +31,12 @@
     <%= f.label :event_date %><br />
     <%= f.date_select :event_date %>
   </div>
-  <div class="field">
+  <div class="field_numdays">
     <%= f.number_field :num_days, :size => 3 %>  
     Up arrow or type number of days event runs for
 
   </div>
-  <div class="field">
+  <div class="field_event_time">
     <%= f.label :event_time %><br />
     <%= f.time_select :event_time %>
   </div>
@@ -48,11 +45,11 @@
     <%= f.text_area :description, :rows => 10, :cols => 100 %>
   </div>
 
-  <div class="field">
+  <div class="field_venue">
     <%= f.label :venue %> (max 8 words)<br />
     <%= f.text_field :venue, :size =>50 %>
   </div>
-  <div class="field">
+  <div class="field_venue_address">
     <%= f.label :address %> (max 8 words)<br />
     <%= f.text_field :address, :size =>45 %>
   </div>
@@ -60,11 +57,11 @@
     <%= f.label :contact %> (First name and phone)<br />
     <%= f.text_field :contact, :size =>45 %>
   </div><hr>&nbsp;
-  <div class="field">
+  <div class="field_quote">
     Brief <%= f.label :quote %> (max 320 words)<br />
     <%= f.text_area :quote, :rows => 10, :cols => 100 %>
   </div>
-  <div class="field">
+  <div class="field_quote_reference">
     <%= f.label :quote_ref %><br />
     <%= f.text_area :quote_ref, :rows => 2, :cols => 60 %>
   </div>
