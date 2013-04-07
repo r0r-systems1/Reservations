@@ -106,7 +106,7 @@ padding: 1em 0 3em 0; /*TRBL*/
  margin-bottom: 0.5em;
  margin-top:2em;
  float: right;
- top: -15px;
+ top: -40px;
 }
 
 #store .add2cartbutton {

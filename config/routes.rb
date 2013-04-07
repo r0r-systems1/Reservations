@@ -7,8 +7,6 @@ Depot::Application.routes.draw do
   resources :payments
 
   resources :eas_types
-
-  resources :attendees
   
   resources :attndcats
 
