@@ -11,7 +11,7 @@ class Customer < ActiveRecord::Base
   validates :eck_id, :presence => true, :uniqueness => true
   validates :fname, :presence => true, :length => { :maximum => 15 }, :exclusion => { :in => %w(admin superuser) }
   validates :lname, :presence => true, :length => { :maximum => 15 }, :exclusion => { :in => %w(admin superuser) }
-  validates :state, :presence => true, :length => { :maximum => 3 }, :inclusion => %w(QLD NSW ACT VIC TAS SA WA NT), :case_sensitive => true
+  validates :state, :presence => true, :length => { :maximum => 3 }
   
   has_one :cart
   has_one :payment
