@@ -1,8 +1,8 @@
 class Customer < ActiveRecord::Base
   attr_accessible :address, :age, :contact, :country, :designation, :donation, :eck_id, :fname, :gender, :lname, :state
 
- validates :age, :inclusion => { :in => 0..99 }
-  validaes :gender, :inclusion => %w(male female), :case_sensitive => false
+  validates :age, :inclusion => { :in => 0..99 }
+  validates :gender, :inclusion => %w(male female), :case_sensitive => false
   validates :address, :presence => true, :length => { :maximum => 55 }
   validates :contact, :presence => true, :length => { :maximum => 16 }
   validates :email, :format => { :with => /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\Z/i, :on => :create }
