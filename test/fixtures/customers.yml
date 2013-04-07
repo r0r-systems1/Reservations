@@ -1,0 +1,27 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  age: 1
+  gender: MyString
+  fname: MyString
+  lname: MyString
+  eck_id: MyString
+  address: MyString
+  state: MyString
+  country: MyString
+  contact: MyString
+  designation: MyString
+  donation: 1
+
+two:
+  age: 1
+  gender: MyString
+  fname: MyString
+  lname: MyString
+  eck_id: MyString
+  address: MyString
+  state: MyString
+  country: MyString
+  contact: MyString
+  designation: MyString
+  donation: 1
