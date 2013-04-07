@@ -4,8 +4,6 @@ Depot::Application.routes.draw do
 
   resources :attendees
 
-  resources :users
-
   resources :products
 
   resources :payments
