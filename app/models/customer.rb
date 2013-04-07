@@ -6,7 +6,7 @@ class Customer < ActiveRecord::Base
   validates :address, :presence => true, :length => { :maximum => 55 }
   validates :contact, :presence => true, :length => { :maximum => 16 }
   validates :email, :format => { :with => /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\Z/i, :on => :create 
-  validates :designation, :presence => true, :length => { :maximum => 15 }
+  validates :designation, :length => { :maximum => 15 }
   validates :donation, :presence => true, :numericality => {:greater_than => -1}
   validates :eck_id, :presence => true, :uniqueness => {:case_sensitive => false}
   validates :fname, :presence => true, :length => { :maximum => 15 }, :exclusion => { :in => %w(admin superuser) }
