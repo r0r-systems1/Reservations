@@ -2,8 +2,6 @@ Depot::Application.routes.draw do
 
   resources :customers
 
-  resources :attendees
-
   resources :products
 
   resources :payments
