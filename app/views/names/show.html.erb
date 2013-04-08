@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @name.name %>
+</p>
+
+<p>
+  <b>Eck:</b>
+  <%= @name.eck_id %>
+</p>
+
+<p>
+  <b>Age:</b>
+  <%= @name.age %>
+</p>
+
+<p>
+  <b>Seminar:</b>
+  <%= @name.seminar %>
+</p>
+
+<p>
+  <b>Hi conf:</b>
+  <%= @name.hi_conf %>
+</p>
+
+<p>
+  <b>Yf campout:</b>
+  <%= @name.YF_campout %>
+</p>
+
+<p>
+  <b>Total:</b>
+  <%= @name.total %>
+</p>
+
+
+<%= link_to 'Edit', edit_name_path(@name) %> |
+<%= link_to 'Back', names_path %>

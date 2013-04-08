@@ -1,0 +1,60 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Address:</b>
+  <%= @payment_detail.address %>
+</p>
+
+<p>
+  <b>Suburb:</b>
+  <%= @payment_detail.suburb %>
+</p>
+
+<p>
+  <b>State:</b>
+  <%= @payment_detail.state %>
+</p>
+
+<p>
+  <b>Pcode:</b>
+  <%= @payment_detail.pcode %>
+</p>
+
+<p>
+  <b>Country:</b>
+  <%= @payment_detail.country %>
+</p>
+
+<p>
+  <b>Email:</b>
+  <%= @payment_detail.email %>
+</p>
+
+<p>
+  <b>Pay by:</b>
+  <%= @payment_detail.pay_by %>
+</p>
+
+<p>
+  <b>Card number:</b>
+  <%= @payment_detail.card_number %>
+</p>
+
+<p>
+  <b>Expiry date:</b>
+  <%= @payment_detail.expiry_date %>
+</p>
+
+<p>
+  <b>Name on card:</b>
+  <%= @payment_detail.Name_on_Card %>
+</p>
+
+<p>
+  <b>Donation:</b>
+  <%= @payment_detail.Donation %>
+</p>
+
+
+<%= link_to 'Edit', edit_payment_detail_path(@payment_detail) %> |
+<%= link_to 'Back', payment_details_path %>

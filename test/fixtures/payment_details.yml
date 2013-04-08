@@ -1,0 +1,27 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  address: MyString
+  suburb: MyString
+  state: MyString
+  pcode: MyString
+  country: MyString
+  email: MyString
+  pay_by: MyString
+  card_number: MyString
+  expiry_date: MyString
+  Name_on_Card: MyString
+  Donation: 1
+
+two:
+  address: MyString
+  suburb: MyString
+  state: MyString
+  pcode: MyString
+  country: MyString
+  email: MyString
+  pay_by: MyString
+  card_number: MyString
+  expiry_date: MyString
+  Name_on_Card: MyString
+  Donation: 1

@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  eck_id: MyString
+  age: 1
+  seminar: 1
+  hi_conf: 1
+  YF_campout: 1
+  total: 1
+
+two:
+  name: MyString
+  eck_id: MyString
+  age: 1
+  seminar: 1
+  hi_conf: 1
+  YF_campout: 1
+  total: 1

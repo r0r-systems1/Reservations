@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130407105804) do
+ActiveRecord::Schema.define(:version => 20130408032030) do
 
   create_table "attendee_eas_types", :force => true do |t|
     t.integer  "eas_types_id", :null => false
@@ -68,6 +68,34 @@ ActiveRecord::Schema.define(:version => 20130407105804) do
     t.string   "m_type",     :null => false
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+  end
+
+  create_table "names", :force => true do |t|
+    t.string   "name"
+    t.string   "eck_id"
+    t.integer  "age"
+    t.integer  "seminar"
+    t.integer  "hi_conf"
+    t.integer  "YF_campout"
+    t.integer  "total"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "payment_details", :force => true do |t|
+    t.string   "address"
+    t.string   "suburb"
+    t.string   "state"
+    t.string   "pcode"
+    t.string   "country"
+    t.string   "email"
+    t.string   "pay_by"
+    t.string   "card_number"
+    t.string   "expiry_date"
+    t.string   "Name_on_Card"
+    t.integer  "Donation"
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
   end
 
   create_table "payments", :force => true do |t|
