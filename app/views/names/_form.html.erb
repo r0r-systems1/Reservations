@@ -10,10 +10,13 @@
       </ul>
     </div>
   <% end %>
+  
+  
   <div class="suggested_donations">
   <!-- Get this data from eas_types table -->
   </div>
-
+  
+  
   <div class="field_name">
     Your first and last name<br />
     <%= f.text_field :name %>
@@ -23,7 +26,7 @@
     <%= f.text_field :eck_id, :size =>12 %>
   </div>
   <div class="field_age">
-    Age, if under 21 years<br />
+    Age<br />
     <%= f.number_field :age, as: :string, :size => 3 %>
   </div>
   <div class="payment_notes"><br/>

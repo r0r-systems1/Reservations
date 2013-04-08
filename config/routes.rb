@@ -1,8 +1,8 @@
 Depot::Application.routes.draw do
 
+  resources :names 
   resources :payment_details
-
-  resources :names
+  
 
   resources :products
 

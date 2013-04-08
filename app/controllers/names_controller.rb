@@ -3,7 +3,7 @@ class NamesController < ApplicationController
   # GET /names.json
   def index
     @names = Name.all
-
+    
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @names }
@@ -14,7 +14,7 @@ class NamesController < ApplicationController
   # GET /names/1.json
   def show
     @name = Name.find(params[:id])
-
+        
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @name }
@@ -25,7 +25,7 @@ class NamesController < ApplicationController
   # GET /names/new.json
   def new
     @name = Name.new
-
+    
     respond_to do |format|
       format.html # new.html.erb
       format.json { render json: @name }
@@ -41,7 +41,7 @@ class NamesController < ApplicationController
   # POST /names.json
   def create
     @name = Name.new(params[:name])
-
+    
     respond_to do |format|
       if @name.save
         format.html { redirect_to @name, notice: 'Name was successfully created.' }

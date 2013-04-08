@@ -5,7 +5,9 @@ class EasType < ActiveRecord::Base
   validates :early, :numericality => {:greater_than_or_equal_to =>0.01}
   validates :normal, :numericality => {:greater_than_or_equal_to =>0.01}
   
-  belongs_to :attendee
+  belongs_to :name
+  belongs_to :product
+  has_many :names
   
 
 end
