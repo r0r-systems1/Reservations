@@ -4,8 +4,6 @@ Depot::Application.routes.draw do
 
   resources :names
 
-  resources :customers
-
   resources :products
 
   resources :eas_types

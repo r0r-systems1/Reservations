@@ -10,36 +10,43 @@
       </ul>
     </div>
   <% end %>
+  <div class="suggested_donations">
+  <!-- Get this data from eas_types table -->
+  </div>
 
-  <div class="field">
-    <%= f.label :name %><br />
+  <div class="field_name">
+    Your first and last name<br />
     <%= f.text_field :name %>
   </div>
-  <div class="field">
-    <%= f.label :eck_id %><br />
-    <%= f.text_field :eck_id %>
+  <div class="field_eckid">
+    Current ECK Membership number<br />
+    <%= f.text_field :eck_id, :size =>12 %>
   </div>
-  <div class="field">
-    <%= f.label :age %><br />
-    <%= f.number_field :age %>
+  <div class="field_age">
+    Age, if under 21 years<br />
+    <%= f.number_field :age, as: :string, :size => 3 %>
   </div>
-  <div class="field">
-    <%= f.label :seminar %><br />
+  <div class="payment_notes"><br/>
+  ** Please enter whole dollar values **
+  </div>
+  <div class="field_seminar">
+    Seminar Donation <br />
     <%= f.number_field :seminar %>
   </div>
-  <div class="field">
-    <%= f.label :hi_conf %><br />
+  <div class="field_hiconf">
+    HI Conference Donation<br />
     <%= f.number_field :hi_conf %>
   </div>
-  <div class="field">
-    <%= f.label :YF_campout %><br />
+  <div class="field_yfcampout">
+    Payment for Youth/family camp  out<br />
     <%= f.number_field :YF_campout %>
   </div>
-  <div class="field">
-    <%= f.label :total %><br />
+  <div class="field_total">
+    Total donation <br />
     <%= f.number_field :total %>
   </div>
   <div class="actions">
     <%= f.submit %>
   </div>
 <% end %>
+
