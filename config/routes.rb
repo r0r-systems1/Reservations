@@ -12,15 +12,11 @@ Depot::Application.routes.draw do
 
   resources :eas_types
   
-  resources :attndcats
-
   resources :line_items
 
   resources :carts
   
   resources :product_member_types
-
-  resources :member_types
 
   get "store/index"
    #resources :products do
