@@ -16,8 +16,6 @@ Depot::Application.routes.draw do
 
   resources :carts
   
-  resources :product_member_types
-
   get "store/index"
    #resources :products do
    #   get :who_bought, :on => :member

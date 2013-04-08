@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130408050139) do
+ActiveRecord::Schema.define(:version => 20130408051326) do
 
   create_table "attendee_eas_types", :force => true do |t|
     t.integer  "eas_types_id", :null => false
@@ -102,13 +102,6 @@ ActiveRecord::Schema.define(:version => 20130408050139) do
 
   add_index "payments", ["name"], :name => "index_payments_on_name"
   add_index "payments", ["state"], :name => "index_payments_on_state"
-
-  create_table "product_member_types", :force => true do |t|
-    t.integer  "mtype_id",    :null => false
-    t.integer  "prodtype_id", :null => false
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
-  end
 
   create_table "products", :force => true do |t|
     t.string   "title",       :null => false
