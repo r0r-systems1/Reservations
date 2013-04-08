@@ -8,8 +8,6 @@ Depot::Application.routes.draw do
 
   resources :products
 
-  resources :payments
-
   resources :eas_types
   
   resources :line_items

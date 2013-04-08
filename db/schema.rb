@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130408051326) do
+ActiveRecord::Schema.define(:version => 20130408052236) do
 
   create_table "attendee_eas_types", :force => true do |t|
     t.integer  "eas_types_id", :null => false
@@ -84,24 +84,6 @@ ActiveRecord::Schema.define(:version => 20130408051326) do
     t.datetime "created_at",   :null => false
     t.datetime "updated_at",   :null => false
   end
-
-  create_table "payments", :force => true do |t|
-    t.string   "name",         :limit => 35, :null => false
-    t.string   "address",      :limit => 60, :null => false
-    t.string   "locality",     :limit => 25, :null => false
-    t.string   "state",        :limit => 5,  :null => false
-    t.string   "country",      :limit => 25, :null => false
-    t.string   "postcode",     :limit => 7,  :null => false
-    t.string   "phone",        :limit => 16, :null => false
-    t.integer  "paymt_amount", :limit => 2,  :null => false
-    t.string   "paymt_type",   :limit => 20, :null => false
-    t.string   "paymt_number", :limit => 35, :null => false
-    t.datetime "created_at",                 :null => false
-    t.datetime "updated_at",                 :null => false
-  end
-
-  add_index "payments", ["name"], :name => "index_payments_on_name"
-  add_index "payments", ["state"], :name => "index_payments_on_state"
 
   create_table "products", :force => true do |t|
     t.string   "title",       :null => false
